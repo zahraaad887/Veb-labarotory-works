@@ -1,0 +1,14 @@
+import math
+
+x = 0.2
+epsilon = 0.01
+
+y = 0
+n = 1 
+term = math.sin(n * x) / math.factorial(n + 1)
+while abs(term) >= epsilon:
+    y += term
+    n += 2 
+    term = math.sin(n * x) / math.factorial(n + 1)
+
+print(y)
